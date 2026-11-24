@@ -1,0 +1,13 @@
+import { Router } from "express";
+import * as controller from "../controller/consultaController.js";
+const router = Router();
+router.post("/", controller.cadastrar);
+router.get("/", controller.listar);
+router.get("/:id", controller.buscarPorId);
+router.patch("/:id", controller.atualizar);
+router.delete("/:id", controller.excluir);
+router.patch("/:idConsulta/medico/:idMedico", controller.vincularMedico);
+router.patch("/:idConsulta/remover-medico", controller.removerMedico);
+router.patch("/:idConsulta/paciente/:idPaciente", controller.vincularPaciente);
+router.patch("/:idConsulta/remover-paciente", controller.removerPaciente);
+export default router;

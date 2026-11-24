@@ -1,0 +1,1 @@
+Salve nesta pasta capturas reais do Postman que comprovem os testes solicitados. As evidências precisam ser geradas após executar a API localmente.

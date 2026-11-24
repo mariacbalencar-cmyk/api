@@ -1,0 +1,422 @@
+{
+  "info": {
+    "_postman_id": "a4a2b630-0f7e-4d66-a1c7-api-clinica-medica",
+    "name": "API Clínica Médica - 19 rotas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ],
+  "item": [
+    {
+      "name": "01 - Cadastrar médico",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/medico",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "medico"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Dra. Exemplo\",\n  \"crm\": \"CRM90001\",\n  \"especialidade\": \"Cardiologia\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "02 - Listar médicos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/medico",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "medico"
+          ]
+        }
+      }
+    },
+    {
+      "name": "03 - Buscar médico por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/medico/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "medico",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "04 - Atualizar médico",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/medico/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "medico",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"especialidade\": \"Clínica Geral\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "05 - Excluir médico",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/medico/3",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "medico",
+            "3"
+          ]
+        }
+      }
+    },
+    {
+      "name": "06 - Cadastrar paciente",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/paciente",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "paciente"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Paciente Exemplo\",\n  \"cpf\": \"99988877766\",\n  \"data_nascimento\": \"1995-04-20\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "07 - Listar pacientes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/paciente",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "paciente"
+          ]
+        }
+      }
+    },
+    {
+      "name": "08 - Buscar paciente por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/paciente/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "paciente",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "09 - Atualizar paciente",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/paciente/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "paciente",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Paciente Atualizado\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "10 - Excluir paciente",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/paciente/3",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "paciente",
+            "3"
+          ]
+        }
+      }
+    },
+    {
+      "name": "11 - Cadastrar consulta sem vínculos",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/consulta",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "consulta"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data_hora\": \"2026-12-10 10:30:00\",\n  \"motivo\": \"Avaliação clínica inicial\",\n  \"status\": \"agendada\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "12 - Listar consultas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/consulta",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "consulta"
+          ]
+        }
+      }
+    },
+    {
+      "name": "13 - Buscar consulta por ID com relacionamentos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/consulta/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "consulta",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "14 - Atualizar consulta",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/consulta/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "consulta",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"concluida\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "15 - Excluir consulta",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/consulta/5",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "consulta",
+            "5"
+          ]
+        }
+      }
+    },
+    {
+      "name": "16 - Vincular médico",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/consulta/1/medico/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "consulta",
+            "1",
+            "medico",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "17 - Remover vínculo do médico",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/consulta/1/remover-medico",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "consulta",
+            "1",
+            "remover-medico"
+          ]
+        }
+      }
+    },
+    {
+      "name": "18 - Vincular paciente",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/consulta/1/paciente/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "consulta",
+            "1",
+            "paciente",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "19 - Remover vínculo do paciente",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/consulta/1/remover-paciente",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "consulta",
+            "1",
+            "remover-paciente"
+          ]
+        }
+      }
+    }
+  ]
+}
